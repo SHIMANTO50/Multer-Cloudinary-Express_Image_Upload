@@ -118,6 +118,7 @@ app.get("/",(req,res)=>{
     res.send("Route is working! YaY!");
 });
 
+//multiple Image Upload
 app.post("/api/v1/product", upload.array('photos[]'), async (req, res, next) => {
     try {
         // Array to store Cloudinary image URLs
@@ -190,7 +191,7 @@ app.post("/api/v1/product", upload.array('photos[]'), async (req, res, next) => 
 //     }
 //     });
 
-
+//single Image Upload
 app.post("/api/v1/product/singleImage", upload.single('avatar') , async(req,res,next)=>{
 
     try {
